@@ -53,14 +53,16 @@
                     foreach ($rnt_data as $i=>$values) {
                         // echo $values['docName'].'  a  '; echo $values['docURL'].'<br>';
                         if($values['docURL']){
-                            echo '<li class="ms-4"><a href="'. $values['docURL'].'" target="_blank"> 
-                                 <span> '. $values['docName'].'</span></a> 
-                                 &nbsp (Type: '.$values['docArea'].', By: '.$values['docBy'].')</li>';
+                            echo '<li class="ms-4"><a href="'. $values['docURL'].'" target="_blank" style="text-decoration: none;"> 
+                                 <span> '. $values['docName'].'</span></a></li>';
+                                 //&nbsp (Type: '.$values['docArea'].', By: '.$values['docBy'].')</li>';
 
                             // echo $values['docName'].'     ';echo $values['docURL'].'<br>';
 
                         }else{
                             // echo '<hr />';
+                            // $lTrim = ltrim($values['docName'],"  ");
+                            // echo $lTrim;
                             echo '<H4 class="ms-3 mt-5">'.$values['docName'].'</H4>';
                             
                         }
