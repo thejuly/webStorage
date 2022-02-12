@@ -19,6 +19,11 @@
         <h1 style="font-size: 45px; color: #0083a1; font-family: 'Mali', cursive; text-align: center;">Document Storage</h1>
         <hr style="margin: 20px;">
 
+        <!-- shown image from google drive -->
+        <!-- https://drive.google.com/file/d/1uFtnbU-b4CIfFBt0Igx9i8uaTpVL207P/view?usp=sharing -->
+        <!-- https://drive.google.com/uc?export=view&id=0B6wwyazyzml-OGQ3VUo0Z2thdmc -->
+        <!-- <img src="https://drive.google.com/uc?export=view&id=1uFtnbU-b4CIfFBt0Igx9i8uaTpVL207P" class="card-img-top img-thumbnail" alt="pict"> -->
+
         <?php 
             $url_app_script = 'https://script.google.com/macros/s/AKfycbwoVg_w1TRpwh6i1Qg7J2C9kDkLTGz8vxin2QmzPedEHF-c6Mr5lgOuKwzRa1nGXY9EAw/exec';
             
@@ -47,12 +52,14 @@
         <section class="container mb-5">
             <div class="row g-3">
                 <?php
+                    $img = array("1H0dTkAgPF0I3IvIPWb5tFZcK2mcXyTAO", "1QxW9LMbQBQmKrl-LrS4MOAPFL4udEY1u", "1pSGuSYu8cQTUv0zSlIu2lvdRqmpAprvs");
                     foreach ($rnt_data as $i=>$values) {
                         foreach ($values as $value) {
-
                             
+                            // https://drive.google.com/uc?export=view&id=1uFtnbU-b4CIfFBt0Igx9i8uaTpVL207P
                             echo '<div class="col-md-6 col-lg-4">';
-                                echo '<img src="img/'.$value.'.png" class="card-img-top img-thumbnail" alt="pict">';
+                                // echo '<img src="img/'.$value.'.png" class="card-img-top img-thumbnail" alt="pict">';
+                                echo '<img src="https://drive.google.com/uc?export=view&id='.$img[$i].'" class="card-img-top img-thumbnail" alt="pict">';
                                 echo '<div class="card-body">';
                                     echo '<h5 class="card-tigle">'.$value.'</h5>';
                                     echo '<p class="card-text">Documentation for '.$value.'</p>';
